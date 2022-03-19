@@ -1,7 +1,9 @@
 # Ohjelmistotekniikka, harjoitustyö
 
-Tavallista tekstiä
+## Tehtävät
 
-**Paksunnettua tekstiä**
+### Viikko 1
 
-*Kursivoitua tekstiä*
+[gitlog.txt](https://github.com/jhakkari/ohte-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+
+[komentorivi.txt](https://github.com/jhakkari/ohte-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
