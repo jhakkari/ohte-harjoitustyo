@@ -1,0 +1,121 @@
+commit 4af5d9d7a6561c96b39d6f5d0774ea30221da826
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Sat Mar 19 00:52:24 2022 +0200
+
+    file2 uudelleennimentä
+
+ tiedostoja/{file2 => file22} | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4873ec1290c080353b629ddeb9bc2768b519f063
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Sat Mar 19 00:51:33 2022 +0200
+
+    file1 poistettu
+
+ tiedostoja/file1 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1fc6c0b06eca274f5c95d4e9c16dcde9e9fd9a93
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:59:50 2022 +0200
+
+    tiedostoja lisätty
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit ed52c6c972d5c201b6b79aed7a115a7e6f0d9aff
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:45:37 2022 +0200
+
+    muutokset ekaan ja kolmanteen
+
+ eka.txt    | 4 ++--
+ kolmas.txt | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 593a90e524253e191f44ebf0a74bd2f037c6bd8f
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:42:07 2022 +0200
+
+    tiedosto.txt uudelleennimentä
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f5c327fa9754f0a38578b87205a2d73a0a21a1fb
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:38:04 2022 +0200
+
+    toinen.txt poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit c78548b5108ffcdc02f9b9e91e10b2048697b0c2
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:35:02 2022 +0200
+
+    muutos tiedostoon
+
+ tiedosto.txt | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+commit a78ddad90a5bd0ee776299dc119ab62275466b49
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:33:12 2022 +0200
+
+    tiedosto muutos
+
+ tiedosto.txt | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+commit c5558b280ea56b62965d3c3d30e442d9c360598f
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:23:02 2022 +0200
+
+    stuff ja secretstuff luotu
+
+ stuff/secretstuff.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8c66f0be63ce297a3a6ca1be3be8dd216dbda740
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:20:29 2022 +0200
+
+    muutokset toiseen ja kolmanteen
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 8e63d84a40b0b99d0074d46733b6d8428bf49f89
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:18:21 2022 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e2d8f221acd04b7e9bc7dc41a4c205b7440567e2
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:14:12 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 33631ce4abf588662edc15eb2277d5b5c938a7d1
+Author: Juuso Hakkari <juuso.hakkari@helsinki.fi>
+Date:   Fri Mar 18 23:10:54 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
