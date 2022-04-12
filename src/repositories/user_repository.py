@@ -22,8 +22,6 @@ def login(username, password):
         return False
     else:
         if user[1] == password:
-            print("Olet kirjautunut sisään!")
             return True
         else:
-            print("salasanat ei täsmää")
             return False

@@ -9,3 +9,4 @@ class TestUserRepository(unittest.TestCase):
     def test_register_new_user(self):
         result = user_repository.register("testuser", "testpassword")
         self.assertTrue(result)
+        
