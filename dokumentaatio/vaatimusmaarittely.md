@@ -11,3 +11,4 @@ Alkuvaiheessa sovelluksella on ainoastaan normaaleja käyttäjiä. Myöhemmin so
 ## Suunnitellut toiminnallisuudet
 
 Kurssien, opintopisteiden ja opintojen ajoituksen seuranta.
+Tunnusten luominen / sisäänkirjautuminen - tehty
