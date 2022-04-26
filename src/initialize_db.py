@@ -10,6 +10,12 @@ def drop_tables(connection):
 
     connection.commit()
 
+    cursor.execute('''
+        drop table if exists courses;
+    ''')
+
+    connection.commit()
+
 
 def create_tables(connection):
     cursor = connection.cursor()
@@ -18,6 +24,18 @@ def create_tables(connection):
         create table users (
             username text primary key UNIQUE,
             password text
+        );
+    ''')
+
+    connection.commit()
+
+    cursor.execute('''
+        create table courses (
+            name text primary key UNIQUE,
+            credits integer,
+            time_used integer,
+            status integer,
+            creator text
         );
     ''')
 

@@ -1,4 +1,4 @@
-from repositories import user_repository
+from repositories import user_repository, course_repository
 
 class TextBasedUi:
     
@@ -95,8 +95,60 @@ class LandingScreen:
         print("You are logged in as", self.user)
         print("")
         while True:
-            print("x : logout")
+            print("x : logout\n1 : add course\n2 : show statistics")
             command = input("> ")
 
             if command == "x":
                 break
+
+            if command == "1":
+                AddCourseScreen(self.user).start()
+
+            if command == "2":
+                CoursestatisticsScreen(self.user).start()
+
+
+class AddCourseScreen:
+
+    def __init__(self, user):
+        self.user = user
+
+    def start(self):
+        print("")
+        print("Add new course")
+        name = input("Name of the course: ")
+        credits = int(input("Credits (1-10): "))
+        time_used = int(input("Time used (so far): "))
+        status = int(input("Course status?\n0 : Ongoing\n1 : Completed\n2 : Dropped\n: "))
+        if status < 0 or status > 2:
+            print("Adding new course failed. Try again.")
+
+        if course_repository.add_course(name, credits, time_used, status, self.user):
+            print("New course added.\n")
+            LandingScreen(self.user).start()
+        else:
+            print("Adding new course failed. Try again.")
+            self.start()
+
+class CoursestatisticsScreen:
+
+    def __init__(self, user):
+        self.user = user
+
+    def start(self):
+        courses = course_repository.get_courses(self.user)
+        statistics = course_repository.get_statistics(self.user)
+        if not courses:
+            print("")
+            print("You haven't added any courses yet!")
+            LandingScreen(self.user).start()
+        
+        print("")
+        print("Courses:")
+        for course in courses:
+            print(f"Name: {course[0]} credits: {course[1]} time used: {course[2]}h")
+
+        print("")
+        print(f"Number of courses: {statistics[0]}, total time used: {statistics[1]}, total credits earned: {statistics[2]}")
+        print("")
+        LandingScreen(self.user)
