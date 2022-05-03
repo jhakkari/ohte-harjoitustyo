@@ -9,5 +9,7 @@
 20.4. koodipohjan refakterointi - 4h
 25.4. refakterointi / graafisen käyttöliittymän rakentaminen - 8h
 26.4. graafisen käyttöliittymän rakentaminen - 6h
+28.4. Muutoksia koko koodipohjaan - 4h
+3.5. Kurssien poistaminen seurannasta - 1h
 
-yht. 40h
+yht. 45h
