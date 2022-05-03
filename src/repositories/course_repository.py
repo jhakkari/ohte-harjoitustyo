@@ -23,3 +23,14 @@ def get_statistics(creator):
 
     result = cursor.execute("SELECT COUNT(name), SUM(time_used), SUM(credits) FROM courses WHERE creator=:creator", {"creator":creator}).fetchone()
     return result
+
+def remove_course(name):
+    connection = get_database_connection()
+    cursor = connection.cursor()
+
+    try:
+        cursor.execute("DELETE FROM courses WHERE name=:name", {"name":name})
+        connection.commit()
+        return True
+    except:
+        return False
