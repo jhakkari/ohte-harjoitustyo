@@ -11,3 +11,6 @@
 ## Viikko 5
 - Kurssien tietojen lisääminen ja tallennus tietokantaan
 - Yhteenveto kurssien lukumäärästä, niihin kuluneesta ajasta ja niiden kerryttämistä opintopisteistä.
+
+## Viikkpo 6
+- Mahdollisuus poistaa kurssi seurannasta.
