@@ -2,8 +2,16 @@ from tkinter import ttk, constants
 from services.course_service import course_services
 
 class AllCoursesView:
+    """Näkymä, joka listaa kaikki kurssit ja niiden tallennetut tiedot."""
 
     def __init__(self, root, handle_show_dashboard_view):
+        """Konstruktori, luo uuden kurssilistausnäkymän.
+
+        Args:
+            root: TKinter elementti, johon näkymä alustetaan.
+            handle_show_dashboard_view: Kutsuttava arvo, kun halutaan takaisin päänäkymään.
+        """
+
         self._root = root
         self._handle_show_dashboard_view = handle_show_dashboard_view
         self._frame = None
@@ -12,9 +20,11 @@ class AllCoursesView:
         self._initialize()
 
     def pack(self):
+        """TKinter toiminnallisuus"""
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """TKinter toiminnallisuus"""
         self._frame.destroy()
 
     def _handle_show_course_info(self):

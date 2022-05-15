@@ -2,8 +2,10 @@ from db_connection import get_database_connection
 from entities.course import Course
 
 class CourseRepository:
+    """Vastaa kursseihin liittyvistä tietokantaoperaatioista"""
 
     def add_course(self, user_id, name, credits, time_used, status):
+        """Lisää kurssin tietokantaan. Palauttaa True, mikäli onnistui."""
         connection = get_database_connection()
         cursor = connection.cursor()
         try:
@@ -15,6 +17,7 @@ class CourseRepository:
             return False
 
     def get_courses(self, user_id):
+        """Palauttaa käyttäjään yhdistetyt kurssit."""
         connection = get_database_connection()
         cursor = connection.cursor()
 
@@ -22,6 +25,7 @@ class CourseRepository:
         return courses
 
     def get_done_count(self, user_id):
+        """Palauttaa käyttäjän suorittamien kurssien lukumäärän."""
         connection = get_database_connection()
         cursor = connection.cursor()
 
@@ -29,6 +33,7 @@ class CourseRepository:
         return results
 
     def get_ongoing_count(self, user_id):
+        """Palauttaa käyttäjän käynnissä olevat kurssit."""
         connection = get_database_connection()
         cursor = connection.cursor()
 
@@ -36,6 +41,7 @@ class CourseRepository:
         return results
 
     def get_dropped_count(self, user_id):
+        """Palauttaa käyttäjän keskeyttämät kurssit."""
         connection = get_database_connection()
         cursor = connection.cursor()
 
@@ -43,6 +49,7 @@ class CourseRepository:
         return results
 
     def get_done_credits_count(self, user_id):
+        """Palauttaa käyttäjän suorittamien kurssien opintopistemäärän."""
         connection = get_database_connection()
         cursor = connection.cursor()
 
@@ -50,6 +57,7 @@ class CourseRepository:
         return results
 
     def get_ongoing_credits_count(self, user_id):
+        """Palauttaa käyttäjän meneillä olevien kurssien opintopistemäärän"""
         connection = get_database_connection()
         cursor = connection.cursor()
 
@@ -57,6 +65,7 @@ class CourseRepository:
         return results
 
     def get_statistics(user_id):
+        """Palauttaa statistiikkaa käyttäjän kursseista."""
         connection = get_database_connection()
         cursor = connection.cursor()
 
@@ -64,6 +73,7 @@ class CourseRepository:
         return result
 
     def get_done_hours(self, user_id):
+        """Palauttaa suoritettujen kurssien tekemiseen kuluneen ajan."""
         connection = get_database_connection()
         cursor = connection.cursor()
 

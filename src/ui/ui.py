@@ -5,11 +5,19 @@ from ui.add_course_view import AddCourseView
 from ui.all_courses_view import AllCoursesView
 
 class UI:
+    """Sovelluksen käyttöliittymästä vastaava luokka."""
     def __init__(self, root):
+        """Luo uuden graafisesta käyttöliittymästä vastaavan luokan.
+
+        Args:
+            root: TKinter elementti, johon käyttöliitymä alustetaan.
+        """
+
         self._root = root
         self._current_view = None
 
     def start(self):
+        """Käynnistää käyttöliittymän kirjautumisnäkymän."""
         self._show_login_view()
 
     def _hide_current_view(self):

@@ -2,7 +2,17 @@ from tkinter import ttk, constants, IntVar, OptionMenu, StringVar
 from services.course_service import course_services
 
 class AddCourseView:
+
+    """Uuden kurssin lisäämisestä vastaava näkymä."""
+
     def __init__(self, root, handle_show_dashboard_view):
+        """Luokan konstruktori. Luo kurssien lisäämisestä vastaavan näkymän.
+
+        Args:
+            root: Tkinter elementti, näkymä luodaan tämän sisään.
+            handle_show_dashboard_view: Kutsuttava arvo, tämän kautta palataan etusivulle.
+        """
+
         self._root = root
         self._handle_show_dashboard_view = handle_show_dashboard_view
         self._frame = None
@@ -17,9 +27,11 @@ class AddCourseView:
         self._initialize()
 
     def pack(self):
+        """TKinter toiminnallisuus """
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """TKinter toiminnallisuus """
         self._frame.destroy()
 
     def _show_error(self, error_message):

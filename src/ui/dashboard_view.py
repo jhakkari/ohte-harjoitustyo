@@ -3,8 +3,18 @@ from services.user_service import user_service
 from services.course_service import course_services
 
 class DashboardView:
+    """Sovelluksen päänäkymä. Vastaa tallennettujen kurssien tietojen esittämisestä."""
 
     def __init__(self, root, handle_show_login_view, handle_show_add_course_view, handle_show_all_courses_view):
+        """Luokan konstruktori. Luo uuden päänäkymän.
+
+        Args:
+            root: TKinter-elementti.
+            handle_show_login_view: Kutsuttava arvo, kun kirjaudutaan ulos. Näyttää kirjautumis ikkunan.
+            handle_show_add_course_view: Kutsuttava arvo, jonka kautta voidaan lisätä kursseja seurantaan.
+            handle_show_all_courses_view: Kutsuttava arvo, näyttää kaikki seurannassa olevat kurssit.
+        """
+
         self._root = root
         self._handle_show_login_view = handle_show_login_view
         self._handle_show_add_course_view = handle_show_add_course_view
@@ -14,9 +24,11 @@ class DashboardView:
         self._initialize()
 
     def pack(self):
+        """TKinter toiminnallisuus"""
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """TKinter toiminnallisuus"""
         self._frame.destroy()
 
     def _handle_logout(self):

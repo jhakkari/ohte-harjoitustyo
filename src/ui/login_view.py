@@ -2,8 +2,17 @@ from tkinter import ttk, constants, StringVar
 from services.user_service import user_service
 
 class LoginView:
+    """Sisäänkirjautumisesta vastaava näkymä."""
 
     def __init__(self, root, handle_show_register_view, handle_show_dashboard_view):
+        """Luokan konstruktori. luo uuden sisäänkirjautumisnäkymän. Sovelluksen ensimmäinen näkymä.
+
+        Args:
+            root: TKinter elementti.
+            handle_show_register_view: Kutsuttava arvo, tämän kautta siirrytään rekisteröitymisnäkymään.
+            handle_show_dashboard_view: Kutsuttava arvo, sisäänkirjautumisen onnistuessa siirtää sovelluksen päänäkymään.
+        """
+
         self._root = root
         self._handle_show_register_view = handle_show_register_view
         self._handle_show_dashboard_view = handle_show_dashboard_view
@@ -16,9 +25,11 @@ class LoginView:
         self._initialize()
 
     def pack(self):
+        """TKinter toiminnallisuus"""
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """TKinter toiminnallisuus"""
         self._frame.destroy()
 
     def _show_error(self, error_message):

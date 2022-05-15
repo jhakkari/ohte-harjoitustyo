@@ -2,8 +2,10 @@ from db_connection import get_database_connection
 from entities.user import User
 
 class UserRepository:
+    """Vastaa käyttäjiin liittyvistä tietokantaoperaatioista"""
 
     def register(username, password):
+        """Rekisteröi uuden käyttäjän."""
         try:
             connection = get_database_connection()
             cursor = connection.cursor()
@@ -17,6 +19,7 @@ class UserRepository:
         return login(username, password)
 
     def login(username, password):
+        """Tarkastaa annetut tiedot, palauttaa User olion, mikäli pitävät paikkaansa."""
         connection = get_database_connection()
         cursor = connection.cursor()
 
@@ -30,6 +33,7 @@ class UserRepository:
                 return None
 
     def check_existing_user(self, username):
+        """Tarkastaa, löytyykö annetulla käyttäjänimellä osumaa tietokannasta"""
         connection = get_database_connection()
         cursor = connection.cursor()
 
@@ -40,6 +44,7 @@ class UserRepository:
             return True
 
     def new_user(self, username, password):
+        """Tallentaa uuden käyttäjän tietokantaan."""
         connection = get_database_connection()
         cursor = connection.cursor()
 
@@ -48,6 +53,7 @@ class UserRepository:
         connection.commit()
 
     def check_user_credentials(self, username, password):
+        """Tarkastaa, pitävätkö annetut tiedot paikkaansa."""
         connection = get_database_connection()
         cursor = connection.cursor()
         user = cursor.execute("SELECT id, username, password FROM users WHERE username=:username", {"username":username}).fetchone()
