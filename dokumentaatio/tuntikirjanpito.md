@@ -11,5 +11,8 @@
 26.4. graafisen käyttöliittymän rakentaminen - 6h
 28.4. Muutoksia koko koodipohjaan - 4h
 3.5. Kurssien poistaminen seurannasta - 1h
+10.5. refakteroinnin ongelmien ratkominen - 8h
+13.5. ongelmien ratkominen / käyttöliittymän viilaus - 8h
+15.5. viimeistely / bugien korjaus- 4h
 
-yht. 45h
+yht. 70h

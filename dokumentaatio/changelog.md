@@ -14,3 +14,6 @@
 
 ## Viikkpo 6
 - Mahdollisuus poistaa kurssi seurannasta.
+
+## Viikko 7
+- Lisätty graafinen käyttöliittymä
