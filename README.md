@@ -3,6 +3,7 @@
 Sovelluksen avulla on mahdollista pitää kirjaa suorittamistaan kursseista, niihin kuluneesta ajasta ja kurssien kerryttämistä opintopisteistä.
 
 ## Dokumentaatio
+- [Käyttöohje](https://github.com/jhakkari/ohte-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 - [Loppupalautus release](https://github.com/jhakkari/ohte-harjoitustyo/releases/tag/loppupalautus)
 - [Vaatimusmäärittely](https://github.com/jhakkari/ohte-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 - [Työaikakirjanpito](https://github.com/jhakkari/ohte-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
