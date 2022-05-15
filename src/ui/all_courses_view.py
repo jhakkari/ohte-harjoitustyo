@@ -19,18 +19,17 @@ class AllCoursesView:
 
     def _handle_show_course_info(self):
         courses = course_services.get_all_courses()
+
+        if not courses:
+            no_courses_label = ttk.Label(master=self._frame, text="Täällä on vielä tyhjää.")
+            no_courses_label.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
+            self._row_number += 1
         
         for course in courses:
-            remove_button = ttk.Button(master=self._frame, text="Poista", command=self._testik(course[0]))
-            remove_button.grid(row=self._row_number, column=0, padx=5, pady=5)
-
             course_label = ttk.Label(master=self._frame, text=f"Nimi: {course[1]} laajuus: {course[2]} käytetty aika: {course[3]}h tila: {course[4]}")
-            course_label.grid(row=self._row_number, column=1, sticky=(constants.E, constants.W), padx=5, pady=5)
+            course_label.grid(row=self._row_number, columnspan=2, padx=5, pady=5)
 
             self._row_number += 1
-
-    def _testik(self, value):
-        print(value)
     
 
     def _initialize(self):
@@ -44,4 +43,4 @@ class AllCoursesView:
         dashboard_button = ttk.Button(master=self._frame, text="Takaisin", command=self._handle_show_dashboard_view)
         dashboard_button.grid(row=self._row_number, column=0, columnspan=2, sticky=(constants.E, constants.W), padx=5, pady=5)
 
-        self._frame.grid_columnconfigure(1, weight=1, minsize=500)
+        self._frame.grid_columnconfigure(1, weight=1, minsize=400)

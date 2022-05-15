@@ -33,7 +33,6 @@ class LoginView:
         password = self._password_entry.get()
 
         logged_in = user_service.login(username, password)
-        print(logged_in)
         if logged_in:
             self._handle_show_dashboard_view()
         else:

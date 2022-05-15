@@ -10,7 +10,6 @@ class CourseService:
 
     def new_course(self,name, credits, time_used, status):
         user_id = self._user_service.get_id()
-        print(user_id)
         if self._course_repository.add_course(user_id, name, credits, time_used, status):
             return True
         else:

@@ -17,8 +17,6 @@ class CourseRepository:
     def get_courses(self, user_id):
         connection = get_database_connection()
         cursor = connection.cursor()
-        print("user_id")
-        print(user_id)
 
         courses = cursor.execute("SELECT id, name, credits, time_used, status FROM courses WHERE user_id=:user_id", {"user_id":user_id}).fetchall()
         return courses
@@ -71,16 +69,5 @@ class CourseRepository:
 
         results = cursor.execute("SELECT SUM(time_used) FROM courses WHERE status='valmis' and user_id=:user_id", {"user_id":user_id}).fetchone()
         return results
-
-    def remove_course(id):
-        connection = get_database_connection()
-        cursor = connection.cursor()
-
-        try:
-            cursor.execute("DELETE FROM courses WHERE id=:id", {"id":id})
-            connection.commit()
-            return True
-        except:
-            return False
 
 course_repository = CourseRepository()
