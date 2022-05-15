@@ -1,5 +1,8 @@
 from ui.register_view import RegisterView
 from ui.login_view import LoginView
+from ui.dashboard_view import DashboardView
+from ui.add_course_view import AddCourseView
+from ui.all_courses_view import AllCoursesView
 
 class UI:
     def __init__(self, root):
@@ -15,12 +18,31 @@ class UI:
         self._current_view = None
 
     def _show_register_view(self):
-        print("")
-
-    def _show_login_view(self):
         self._hide_current_view()
-        self._current_view = LoginView(self._root, self._show_register_view)
+        self._current_view = RegisterView(self._root, self._show_login_view, self._show_dashboard_view)
 
         self._current_view.pack()
 
+    def _show_login_view(self):
+        self._hide_current_view()
+        self._current_view = LoginView(self._root, self._show_register_view, self._show_dashboard_view)
+
+        self._current_view.pack()
+
+    def _show_dashboard_view(self):
+        self._hide_current_view()
+        self._current_view = DashboardView(self._root, self._show_login_view, self._add_course_view, self._all_courses_view)
+
+        self._current_view.pack()
     
+    def _add_course_view(self):
+        self._hide_current_view()
+        self._current_view = AddCourseView(self._root, self._show_dashboard_view)
+
+        self._current_view.pack()
+
+    def _all_courses_view(self):
+        self._hide_current_view()
+        self._current_view = AllCoursesView(self._root, self._show_dashboard_view)
+
+        self._current_view.pack()
