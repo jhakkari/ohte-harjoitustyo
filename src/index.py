@@ -1,3 +1,16 @@
-from ui import text_based_ui
+from tkinter import Tk
+from ui.ui import UI
 
-text_based_ui.TextBasedUi().start()
+
+def main():
+    window = Tk()
+    window.title("Opintoseuranta")
+
+    ui_view = UI(window)
+    ui_view.start()
+
+    window.mainloop()
+
+
+if __name__ == "__main__":
+    main()

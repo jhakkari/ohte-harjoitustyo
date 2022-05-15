@@ -22,7 +22,8 @@ def create_tables(connection):
 
     cursor.execute('''
         create table users (
-            username text primary key UNIQUE,
+            id integer primary key,
+            username text UNIQUE,
             password text
         );
     ''')
@@ -31,11 +32,12 @@ def create_tables(connection):
 
     cursor.execute('''
         create table courses (
-            name text primary key UNIQUE,
+            id integer primary key,
+            user_id integer,
+            name text,
             credits integer,
             time_used integer,
-            status integer,
-            creator text
+            status string
         );
     ''')
 
